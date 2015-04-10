@@ -16,6 +16,9 @@ Source0:	https://github.com/ldx/python-iptables/archive/v%{version}.tar.gz
 URL:		https://github.com/ldx/python-iptables
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
+%if %{with doc}
+BuildRequires:	sphinx-pdg
+%endif
 %if %{with python2}
 BuildRequires:	python-devel
 BuildRequires:	python-distribute
@@ -55,14 +58,12 @@ Dokumentacja API %{module}.
 
 %build
 %if %{with python2}
-# CC/CFLAGS is only for arch packages - remove on noarch packages
 CC="%{__cc}" \
 CFLAGS="%{rpmcppflags} %{rpmcflags}" \
 %{__python} setup.py build --build-base build-2
 %endif
 
 %if %{with python3}
-# CC/CFLAGS is only for arch packages - remove on noarch packages
 CC="%{__cc}" \
 CFLAGS="%{rpmcppflags} %{rpmcflags}" \
 %{__python3} setup.py build --build-base build-3
@@ -114,7 +115,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -n python3-%{module}
 %defattr(644,root,root,755)
 %doc README.md
-%{py3_sitedir}/%{module}
+%dir %{py3_sitedir}/%{module}
+# XXX .so file & perms
 %{py3_sitedir}/python_%{module}-%{version}-py*.egg-info
 %endif
 

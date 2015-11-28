@@ -8,7 +8,7 @@
 Summary:	Python bindings for iptables
 Name:		python-%{module}
 Version:	0.3.0
-Release:	1
+Release:	2
 License:	APL
 Group:		Libraries/Python
 Source0:	https://github.com/ldx/python-iptables/archive/v%{version}.tar.gz

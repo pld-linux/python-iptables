@@ -15,7 +15,7 @@ Source0:	https://github.com/ldx/python-iptables/archive/v%{version}.tar.gz
 # Source0-md5:	55aa8421c0f2dea90aa204b87fc43abf
 URL:		https://github.com/ldx/python-iptables
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %if %{with doc}
 BuildRequires:	sphinx-pdg
 %endif

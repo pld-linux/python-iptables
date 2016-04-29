@@ -9,7 +9,7 @@ Summary:	Python 2 bindings for iptables
 Summary(pl.UTF-8):	Wiązania Pythona 2 do iptables
 Name:		python-%{module}
 Version:	0.10.0
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries/Python
 Source0:	https://github.com/ldx/python-iptables/archive/v%{version}/%{name}-%{version}.tar.gz
@@ -52,6 +52,9 @@ Wiązania Pythona 3 do iptables.
 Summary:	API documentation for Python iptables module
 Summary(pl.UTF-8):	Dokumentacja API modułu Pythona iptables
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API documentation for Python iptables module.

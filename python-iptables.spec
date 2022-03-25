@@ -9,7 +9,7 @@ Summary:	Python 2 bindings for iptables
 Summary(pl.UTF-8):	Wiązania Pythona 2 do iptables
 Name:		python-%{module}
 Version:	0.10.0
-Release:	7
+Release:	8
 License:	Apache v2.0
 Group:		Libraries/Python
 Source0:	https://github.com/ldx/python-iptables/archive/v%{version}/%{name}-%{version}.tar.gz
